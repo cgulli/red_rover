@@ -1,11 +1,11 @@
 class Plateau
-attr_accessor :rover1, :rover2, :x, :y
+attr_accessor :roverA, :roverB, :x, :y
 
-  def initialize(x, y, rover1, rover2)
+  def initialize(x, y, roverA, roverB)
   @x = x + 1
   @y = y + 1
-  @rover1 = rover1
-  @rover2 = rover2
+  @roverA = roverA
+  @roverB = roverB
   end
 
 end
