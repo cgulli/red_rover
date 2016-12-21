@@ -7,12 +7,6 @@ class Rover
     @direction = direction
   end
 
-  def status
-
-    "#{@x_coord}, #{@y_coord} facing #{@direction}"
-
-  end
-
   def move
     if @direction == 'N'
       @y_coord += 1
@@ -53,5 +47,31 @@ class Rover
     end
   end
 
+  def read_instructions
+    	puts "Input instructions"
+
+    	instructions = input_action
+    	instructions.split("").each do |x|
+
+        if x == "M"
+    			then move
+    		elsif x == 'L' || x == 'R'
+    			then turn(x)
+    		else x == "Q" || "q"
+    			exit
+        end
+      end
+      rover_position
+  end
+
+  def rover_position
+    "Rover is at (#{@x_coord}, #{@y_coord}) facing #{@direction}"
+  end
+
+  private
+
+  def input_action
+    gets.chomp
+  end
 
 end

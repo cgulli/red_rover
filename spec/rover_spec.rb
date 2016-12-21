@@ -1,33 +1,34 @@
 require 'rover'
 
 describe Rover do
-  rover1 = Rover.new
   context '#initialize' do
+    rover1 = Rover.new
     it 'has a default start position' do
       expect(rover1.x_coord).to eq 0
       expect(rover1.y_coord).to eq 0
       expect(rover1.direction).to eq 'N'
     end
-
-    it 'displays the status of the rover' do
-      expect(rover1.status).to eq '0, 0 facing N'
-    end
-
   end
 
 
-  context '#it follows move commands' do
-
+  context '#it moves and turns' do
+    rover2 = Rover.new
     it 'moves one grid space' do
-      rover1.move
-      expect(rover1.y_coord).to eq 1
+      rover2.move
+      expect(rover2.y_coord).to eq 1
     end
 
     it 'turns rover to face a different direction' do
-      rover1.turn('L')
-      expect(rover1.direction).to eq 'W'
+      rover2.turn('L')
+      expect(rover2.direction).to eq 'W'
     end
 
-
+    context '#it receives instructions' do
+      rover3 = Rover.new
+      it 'receives instructions for navigation' do
+        rover3.read_instructions
+        expect(rover3.rover_position).to eq "Rover is at (-1, 2) facing W"
+      end
+    end
   end
 end
