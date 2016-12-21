@@ -26,7 +26,7 @@ Assume that the square directly North from (x, y) is (x, y+1).
 Input and Output
 ~~~~
 Test Input:
-55
+Plateau: 55
 12N
 LMLMLMLMM
 33E
