@@ -8,13 +8,14 @@ class Rover
   end
 
   def move
-    if @direction == 'N'
+    case @direction
+    when'N'
       @y_coord += 1
-    elsif @direction == 'E'
+    when 'E'
       @x_coord += 1
-    elsif @direction == 'S'
+    when'S'
       @y_coord += -1
-    elsif @direction == 'W'
+    when 'W'
       @x_coord += -1
     end
   end
@@ -71,7 +72,7 @@ class Rover
   private
 
   def input_action
-    gets.chomp
+    gets.chomp.upcase
   end
 
 end
