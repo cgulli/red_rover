@@ -24,4 +24,34 @@ class Rover
       @x_coord += -1
     end
   end
+
+  def turn(turn_dir)
+    if turn_dir == 'R'
+      if @direction == 'N'
+        @direction = 'E'
+      elsif @direction == 'E'
+        @direction = 'S'
+      elsif @direction == 'S'
+        @direction = 'W'
+      elsif @direction == 'W'
+        @direction = 'N'
+      else
+        raise 'Incorrect turn direction'
+      end
+    elsif turn_dir == 'L'
+      if @direction == 'N'
+        @direction = 'W'
+      elsif @direction == 'W'
+        @direction = 'S'
+      elsif @direction == 'S'
+        @direction = 'E'
+      elsif @direction == 'E'
+        @direction = 'N'
+      else
+        raise 'Incorrect turn direction'
+      end
+    end
+  end
+
+
 end

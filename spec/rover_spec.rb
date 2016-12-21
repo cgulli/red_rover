@@ -23,10 +23,10 @@ describe Rover do
       expect(rover1.y_coord).to eq 1
     end
 
-    # it 'turns rover in different direction' do
-    #
-    #
-    # end
+    it 'turns rover to face a different direction' do
+      rover1.turn('L')
+      expect(rover1.direction).to eq 'W'
+    end
 
 
   end
