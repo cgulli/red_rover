@@ -29,7 +29,8 @@ describe Rover do
       rover = Rover.new
       it 'receives instructions for navigation' do
         rover.read_instructions
-        expect(rover.rover_position).to eq "Rover is at (-1, 2) facing W"
+        # mmlm
+        expect(rover.rover_position).to eq "rover is at (-1, 2) facing W"
     end
   end
 end

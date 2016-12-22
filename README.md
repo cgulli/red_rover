@@ -1,7 +1,7 @@
 #Tech Test Challenge, Mars Rover
-##Caitlin Gulliford, 21/12/16
+##Caitlin Gulliford, 23/12/16
 
-###Solution to the Mars Rover Challenge. Input run as unit tests in rspec.
+###Solution to the Mars Rover Challenge.
 
 ####*How to Use:*
 Run the file

@@ -10,14 +10,10 @@ class Rover
 
   def move
     case @direction
-    when'N'
-      @y_coord += 1
-    when 'E'
-      @x_coord += 1
-    when'S'
-      @y_coord += -1
-    when 'W'
-      @x_coord += -1
+    when'N' then @y_coord += 1
+    when 'E' then @x_coord += 1
+    when'S' then @y_coord += -1
+    when 'W' then  @x_coord += -1
     end
   end
 
@@ -54,7 +50,7 @@ class Rover
 
     	instructions = input_action
     	instructions.split("").each do |x|
-
+    
         if x == "M"
     			then move
     		elsif x == 'L' || x == 'R'
@@ -67,7 +63,7 @@ class Rover
   end
 
   def rover_position
-    "Rover#{@name} is at (#{@x_coord}, #{@y_coord}) facing #{@direction}"
+    "#{@name} is at (#{@x_coord}, #{@y_coord}) facing #{@direction}"
   end
 
   private
