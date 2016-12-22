@@ -5,16 +5,19 @@
 
 ####*How to Use:*
 Run the file
-~~~~mission_controller.rb
+~~~~
+[ruby] mission_controller.rb
 ~~~~
 from the command line. When prompted, input the directions for roverA:
 
-~~~~LMLMLMLMM
+~~~~
+LMLMLMLMM
 ~~~~
 
 and then for roverB:
 
-~~~~MMRMMRMRRM
+~~~~
+MMRMMRMRRM
 ~~~~
 
 #####Challenge Instructions
