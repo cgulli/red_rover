@@ -3,7 +3,21 @@
 
 ###Solution to the Mars Rover Challenge. Input run as unit tests in rspec.
 
-####Challenge Instructions
+####*How to Use:*
+Run the file
+~~~~mission_controller.rb
+~~~~
+from the command line. When prompted, input the directions for roverA:
+
+~~~~LMLMLMLMM
+~~~~
+
+and then for roverB:
+
+~~~~MMRMMRMRRM
+~~~~
+
+#####Challenge Instructions
 
 *Problem : Mars Rover*
 

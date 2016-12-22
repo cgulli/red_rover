@@ -1,7 +1,7 @@
 class Rover
   attr_accessor :x_coord, :y_coord, :direction
 
-  def initialize(name, x_coord = 0, y_coord = 0, direction = 'N')
+  def initialize(name = 'rover', x_coord = 0, y_coord = 0, direction = 'N')
     @name = name
     @x_coord = x_coord
     @y_coord = y_coord
