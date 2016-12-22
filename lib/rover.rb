@@ -50,7 +50,6 @@ class Rover
 
     	instructions = input_action
     	instructions.split("").each do |x|
-    
         if x == "M"
     			then move
     		elsif x == 'L' || x == 'R'
