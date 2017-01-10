@@ -6,7 +6,7 @@
 ####*How to Use:*
 Run the file
 ~~~~
-[ruby] mission_controller.rb
+[ruby] mission_scenario.rb
 ~~~~
 from the command line. When prompted, input the directions for roverA:
 
@@ -19,6 +19,11 @@ and then for roverB:
 ~~~~
 MMRMMRMRRM
 ~~~~
+
+
+####*Design Logic*
+
+
 
 #####Challenge Instructions
 

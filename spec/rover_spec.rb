@@ -11,31 +11,21 @@ describe Rover do
     end
   end
 
-
   context '#it moves and turns' do
     rover = Rover.new
     it 'moves one grid space' do
       rover.move
-      expect(rover.rover_position).to eq "rover is at (0, 1) facing N"
+      expect(rover.y_coord).to eq 1
     end
 
     it 'turns rover right' do
       rover.turn('R')
-      expect(rover.rover_position).to eq "rover is at (0, 1) facing E"
+      expect(rover.direction).to eq 'E'
     end
 
     it 'turns rover left' do
       rover.turn('L')
-      expect(rover.rover_position).to eq "rover is at (0, 1) facing N"
-    end
-  end
-
-  context '#it receives instructions' do
-      rover = Rover.new
-      it 'receives instructions for navigation' do
-        puts 'hint: mmlm'
-        rover.read_instructions
-        expect(rover.rover_position).to eq "rover is at (-1, 2) facing W"
+      expect(rover.direction).to eq 'N'
     end
   end
 end
