@@ -1,4 +1,4 @@
-require_relative './lib/controller'
+require_relative './lib/rover'
 
 puts "Rover A initiates first"
 rover_A = Rover.new('rover_A', 1, 2, 'N')
