@@ -16,12 +16,17 @@ describe Rover do
     rover = Rover.new
     it 'moves one grid space' do
       rover.move
-      expect(rover.y_coord).to eq 1
+      expect(rover.rover_position).to eq "rover is at (0, 1) facing N"
     end
 
-    it 'turns rover to face a different direction' do
+    it 'turns rover right' do
+      rover.turn('R')
+      expect(rover.rover_position).to eq "rover is at (0, 1) facing E"
+    end
+
+    it 'turns rover left' do
       rover.turn('L')
-      expect(rover.direction).to eq 'W'
+      expect(rover.rover_position).to eq "rover is at (0, 1) facing N"
     end
   end
 

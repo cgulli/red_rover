@@ -6,6 +6,7 @@ class Rover
     @x_coord = x_coord
     @y_coord = y_coord
     @direction = direction
+    @compass = ['N', 'E', 'S', 'W']
   end
 
   def move
@@ -19,29 +20,13 @@ class Rover
 
   def turn(turn_dir)
     if turn_dir == 'R'
-      if @direction == 'N'
-        @direction = 'E'
-      elsif @direction == 'E'
-        @direction = 'S'
-      elsif @direction == 'S'
-        @direction = 'W'
-      elsif @direction == 'W'
-        @direction = 'N'
-      else
-        raise 'Incorrect turn direction'
-      end
+      new_dir_index = (@compass.index(@direction) + 1) % 4
+      @direction = @compass[new_dir_index]
     elsif turn_dir == 'L'
-      if @direction == 'N'
-        @direction = 'W'
-      elsif @direction == 'W'
-        @direction = 'S'
-      elsif @direction == 'S'
-        @direction = 'E'
-      elsif @direction == 'E'
-        @direction = 'N'
+      new_dir_index = (@compass.index(@direction) - 1) % 4
+      @direction = @compass[new_dir_index]
       else
         raise 'Incorrect turn direction'
-      end
     end
   end
 
