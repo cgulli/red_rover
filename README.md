@@ -6,7 +6,7 @@
 ####*How to Use:*
 Run the file
 ~~~~
-[ruby] mission_scenario.rb
+[ruby] mission_control.rb
 ~~~~
 from the command line. When prompted, input the directions for roverA:
 
@@ -23,7 +23,16 @@ MMRMMRMRRM
 
 ####*Design Logic*
 
+The programme is designed with the main 'object' being the Rover. Logic for moving the rover and turning the rover is located in the Rover class.
 
+To run the programme and see the expected output, the mission_control.rb operates as a basic interface.
+
+
+The challenge instructions were interpreted to create a rover that operates in real time, with the rovers initialised using the input information under the understanding if they are actual rovers they would be on the plateau with a location whether or not it is defined. mission_control.rb then prompts the user to enter the movement instructions(input) to move the rover appropriately. The advantage of this is that the rover moves in a more real time fashion, and can be given further commands after this.
+
+*potential improvements*
+
+Given more time and resources, I would prefer to move the read_instructions logic into a controller class instead of having it within the rover class. Additionally, while the challenge never asks for the plateau to act with restrictions on the rover (i.e. not letting it move beyond the 5, 5 grid), I would create a plateau class that is initialised with a fixed grid value, and should the rover attempt to move beyond the grid it would return an error. This was attempted but not finalised with successful testing, so has been omitted for sake of cleanliness.
 
 #####Challenge Instructions
 

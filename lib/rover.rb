@@ -31,7 +31,7 @@ class Rover
   end
 
   def read_instructions
-    	puts "Input instructions for #{@name}"
+    	puts "Input direction instructions for #{@name}"
 
     	instructions = input_action
     	instructions.split("").each do |x|
